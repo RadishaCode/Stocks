@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stock Terminal Pro</title>
+<style>
+body{background:#111827;color:white;font-family:Arial;padding:30px}
+.card{background:#1f2937;padding:20px;border-radius:10px}
+</style>
+</head>
+<body>
+<h1>Stock Terminal Pro</h1>
+<div class="card">
+<h2>AI Market Dashboard</h2>
+<p id="status">Loading...</p>
+</div>
+<script>
+fetch('http://127.0.0.1:8000/')
+.then(r=>r.json())
+.then(d=>document.getElementById('status').innerText=d.status)
+</script>
+</body>
+</html>
